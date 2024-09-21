@@ -6,7 +6,8 @@ const restaurants = [
     },
     {
         name: "KC Foods",
-        image: "https://via.placeholder.com/200x150.png?text=Sushi+Spot"
+        image: "https://via.placeholder.com/200x150.png?text=Sushi+Spot",
+        link: "kcfoods.html" // Added link for KC Foods
     },
     {
         name: "FC Foods",

@@ -1,24 +1,36 @@
-// Get cart from local storage
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-let totalPrice = 0;
+let cart = []; // Array to hold cart items
 
-// Select the cart items container and total price element
-const cartItemsContainer = document.querySelector('.cart-items');
-const totalPriceElement = document.getElementById('total-price');
+// Function to display cart items
+function displayCart() {
+    const cartItemsDiv = document.getElementById('cart-items');
+    cartItemsDiv.innerHTML = ''; // Clear previous items
+    let totalPrice = 0;
 
-// Display cart items
-cart.forEach(item => {
-    const cartItem = document.createElement('div');
-    cartItem.classList.add('cart-item');
-    cartItem.innerHTML = `
-        <h4>${item.name}</h4>
-        <p>Price: ₹${item.price.toFixed(2)}</p>
-    `;
-    cartItemsContainer.appendChild(cartItem);
+    cart.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'cart-item';
+        itemDiv.innerHTML = `
+            <span>${item.name} - ₹${item.price}</span>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItemsDiv.appendChild(itemDiv);
+        totalPrice += item.price;
+    });
 
-    // Calculate total price
-    totalPrice += item.price;
-});
+    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
 
-// Display total price
-totalPriceElement.textContent = totalPrice.toFixed(2);
+// Function to remove item from cart
+function removeFromCart(index) {
+    cart.splice(index, 1); // Remove item from cart
+    displayCart(); // Refresh cart display
+}
+
+// Example items added to the cart for testing
+cart = [
+    { name: 'Veg Burger', price: 50 },
+    { name: 'Chicken Burger', price: 60 }
+];
+
+// Initial display of cart items
+displayCart();
