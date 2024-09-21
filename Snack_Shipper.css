@@ -103,3 +103,16 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+/* Set the height of the map */
+#map {
+    height: 400px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Add some styling for the container */
+.container {
+    text-align: center;
+    margin: 20px;
+}
