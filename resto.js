@@ -1,12 +1,12 @@
 const restaurants = [
     {
         name: "ENZO",
-        image: "https://via.placeholder.com/200x150.png?text=Pizza+Palace",
+        image: "enzo.jpg",
         link: "enzo.html" // Added the link for ENZO
     },
     {
         name: "KC Foods",
-        image: "https://via.placeholder.com/200x150.png?text=Sushi+Spot",
+        image: "kcfoods.jpg",
         link: "kcfoods.html" // Added link for KC Foods
     },
     {
