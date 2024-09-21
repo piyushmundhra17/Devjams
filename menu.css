@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 5px 0 20px;
+}
+
+.hero-btn {
+    background-color: #FF6F61;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-list {
+    padding: 20px;
+    max-width: 1200px; /* Limit the width for better alignment */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the container */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%; /* Full width */
+}
+
+.menu-item img {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.menu-name {
+    font-size: 18px;
+    margin: 0; /* No margin for better alignment */
+    flex-grow: 1; /* Allow text to grow */
+}
+
+.menu-price {
+    font-size: 16px;
+    margin: 0; /* No margin for better alignment */
+    color: #555;
+}
+
+.menu-type {
+    margin-left: 10px; /* Space between name and type */
+}
+
+.veg-symbol {
+    width: 10px;
+    height: 10px;
+    background-color: green; /* Green dot for veg */
+    border-radius: 50%; /* Make it circular */
+    display: inline-block;
+}
+
+.non-veg-symbol {
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Red dot for non-veg */
+    border-radius: 50%; /* Make it circular */
+    display: inline-block;
+}
+
+.add-to-cart-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 15px; /* Space between text and button */
+}
+
+.add-to-cart-button:hover {
+    background-color: #ff4500; /* OrangeRed */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

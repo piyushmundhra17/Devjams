@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+p{
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    text-align: left;
+    
+}
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 5px 0 20px;
+}
+
+.hero-btn {
+    background-color: #FF6F61;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Limit the width for better alignment */
+    margin: 0 auto; /* Center the container */
+}
+
+.restaurant-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.restaurant-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.restaurant-name {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.order-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #ff4500; /* OrangeRed */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

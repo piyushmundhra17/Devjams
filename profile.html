@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - VSpice</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-card">
+            <!--
+            <div class="profile-header">
+                <img src="profile-pic.jpg" alt="User Profile Picture" class="profile-img">
+                <h1 class="username">John Doe</h1>
+                <p class="email">johndoe@example.com</p>
+            </div>
+            -->
+            <div class="profile-details">
+                <h2>Profile Details</h2>
+                <form id="profileForm">
+                    <div class="detail-row">
+                        <label class="detail-title">Full Name:</label>
+                        <input type="text" id="fullName" value="John Doe" required>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Email:</label>
+                        <input type="email" id="email" value="johndoe@example.com" required>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Phone Number:</label>
+                        <input type="text" id="phone" placeholder="Enter 10-digit phone number" maxlength="10" required>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Gender:</label>
+                        <select id="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Date of Birth:</label>
+                        <input type="text" id="dob" placeholder="dd/mm/yyyy" required>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Hostel Block No:</label>
+                        <input type="text" id="hostelBlock" placeholder="Enter your block letter" maxlength="1" required>
+                    </div>
+                    <div class="detail-row">
+                        <label class="detail-title">Room No:</label>
+                        <input type="text" id="roomNumber" placeholder="Enter 4-digit room number" maxlength="4" required>
+                    </div>
+
+                    <button onclick="window.location.href='index_signedin.html';" type="submit" class="edit-btn">Save Profile</button>
+                </form>
+            </div>
+            <p id="successMessage" class="success-message"></p>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

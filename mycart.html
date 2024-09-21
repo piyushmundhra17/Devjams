@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEats - Cart</title>
+    <link rel="stylesheet" href="mycart.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">VSpice</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+            <a href="login page.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="pizza.jpg" alt="Pizza">
+                    <div class="item-details">
+                        <h3>Margherita Pizza</h3>
+                        <p>Quantity: 
+                            <input type="number" value="1" min="1">
+                        </p>
+                        <p>Price: $12.99</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <img src="burger.jpg" alt="Burger">
+                    <div class="item-details">
+                        <h3>Cheeseburger</h3>
+                        <p>Quantity: 
+                            <input type="number" value="2" min="1">
+                        </p>
+                        <p>Price: $8.99</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Items: 2</p>
+                <p>Subtotal: $30.97</p>
+                <p>Delivery: $3.99</p>
+                <hr>
+                <p><strong>Total: $34.96</strong></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 VSpice. All rights reserved.</p>
+    </footer>
+
+    <script src="mycart.js"></script>
+
+</body>
+</html>

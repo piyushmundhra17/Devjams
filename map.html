@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Tracking for Delivery</title>
+
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        /* Set the height of the map */
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+
+        /* Add some styling for the container */
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Delivery Person Location Tracking</h2>
+        <div id="map"></div>
+        <p>Tracking current location...</p>
+    </div>
+
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- JavaScript for Geolocation and Map -->
+    <script>
+        // Create a map and center it on a default location
+        var map = L.map('map').setView([12.9716, 77.5946], 13);  // Default location is Bangalore, India
+
+        // Add OpenStreetMap tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Create a marker to represent the delivery person's current location
+        var marker = L.marker([12.9716, 77.5946]).addTo(map)
+            .bindPopup("Delivery person's current location")
+            .openPopup();
+
+        // Function to update location on the map
+        function updateLocation(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            // Set the marker to the new location
+            marker.setLatLng([lat, lng]);
+            map.setView([lat, lng], 13); // Adjust the view to center around the new location
+        }
+
+        // Handle errors in geolocation
+        function handleError(error) {
+            console.log('Error getting location: ', error.message);
+        }
+
+        // Watch the user's location and update the marker on the map
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(updateLocation, handleError, {
+                enableHighAccuracy: true, // Use GPS if available
+                maximumAge: 10000, // Don't accept an old cached position
+                timeout: 10000 // Wait for at most 10 seconds for GPS signal
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    </script>
+</body>
+</html>
