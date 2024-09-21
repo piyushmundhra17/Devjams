@@ -1,8 +1,6 @@
+// SIGNUP
 
-//SIGNUP
-
-
-document.getElementById("signupForm").addEventListener("submit", function(event) {
+document.getElementById("signupForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent form submission
 
     const username = document.getElementById("username").value;
@@ -21,13 +19,55 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         return;
     }
 
-    // Here you would typically send a request to your server for registration
+    // Send signup request to the backend
+    const response = await fetch('http://localhost:5000/api/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, email, password })
+    });
+
+    const data = await response.json();
+        if (response.ok) {
+            alert(data.message); // Successful signup
+        } else {
+            alert(data.message); // Show error message (e.g., user already exists)
+        }
+
+    // Save user data in localStorage
+    localStorage.setItem('user', JSON.stringify({ username, email, password }));
+
+    alert("Signup successful! You can now log in.");
+
+    // Regex for basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        displayMessage("Please enter a valid email address.", "error");
+        return;
+    }
+
+    // Simulate a successful signup (replace this with actual registration logic)
     console.log("Username:", username);
     console.log("Email:", email);
-    console.log("Password:", password);
+    // Avoid logging the password in production
+
+    // Simulate signup success
+    displayMessage("Signup successful!", "success");
+    // Redirect to another page (e.g., login page)
+    // window.location.href = 'login page.html'; // Uncomment for real use
+;
+
+// Function to display messages
+function displayMessage(message, type) {
+    const messageDiv = document.createElement("div");
+    messageDiv.textContent = message;
+    messageDiv.className = type; // Apply a class for styling
+    document.body.appendChild(messageDiv);
     
-    // Simulate a successful signup (replace this with actual registration logic)
-    alert("Signup successful!");
-   
-    
-});
+    // Remove message after some time
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 3000);
+}
+})
