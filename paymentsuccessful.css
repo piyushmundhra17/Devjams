@@ -1,0 +1,25 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #FF6F61; /* Pinkish orange */
+    color: white;
+}
+
+.thank-you-message {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #FF6F61; /* Pinkish orange */
+}
+
+.delivery-partner {
+    margin-top: 20px;
+    font-size: 18px;
+}
