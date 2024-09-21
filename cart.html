@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSpice Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">VSpice</div>
+        <ul class="nav-links">
+            <li><a href="resto.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </div>
+
+        
+        <!-- Billing Section -->
+        <div class="billing">
+            <h3>Billing Summary</h3>
+            <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+            <p>Delivery Fee: ₹<span id="delivery-fee">20.00</span></p>
+            <p>GST (5%): ₹<span id="gst">0.00</span></p>
+            <h3>Grand Total: ₹<span id="grand-total">0.00</span></h3>
+        </div>
+
+        <button class="proceed-btn" onclick="window.location.href='payment.html';">Proceed to Payment</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 VSpice. All rights reserved.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

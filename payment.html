@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>UPI Payment</title>
+</head>
+<body>
+    <header>
+        <h1>Payment Page</h1>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+        <h2>Complete Your Payment</h2>
+        <form id="paymentForm">
+            <label for="upiId">Enter UPI ID:</label>
+            <input type="text" id="upiId" placeholder="example@upi" required>
+
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
+

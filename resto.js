@@ -1,6 +1,6 @@
 const restaurants = [
     {
-        name: "ENZO",
+        name : "ENZO",
         image: "enzo.jpg",
         link: "enzo.html" // Added the link for ENZO
     },
@@ -10,28 +10,28 @@ const restaurants = [
         link: "kcfoods.html" // Added link for KC Foods
     },
     {
-        name: "FC Foods",
-        image: "https://via.placeholder.com/200x150.png?text=Burger+Haven"
+        name: "Arasan Caterers",
+        image: "arasan.jpg"
     },
     {
         name: "DC Canteen",
-        image: "https://via.placeholder.com/200x150.png?text=Salad+Station"
+        image: "dccanteen.jpg"
+    },
+    {
+        name: "Quickbites",
+        image: "quickbites.jpg"
+    },
+    {
+        name: "Amul, Foodys",
+        image: "amul.png"
     },
     {
         name: "DC Cafe",
-        image: "https://via.placeholder.com/200x150.png?text=Pasta+Place"
+        image: "dccafe.jpg"
     },
     {
-        name: "QuickBites",
-        image: "https://via.placeholder.com/200x150.png?text=Taco+Town"
-    },
-    {
-        name: "flora Cafe",
-        image: "https://via.placeholder.com/200x150.png?text=Dessert+Delight"
-    },
-    {
-        name: "One Food World",
-        image: "https://via.placeholder.com/200x150.png?text=Coffee+Corner"
+        name: "Apples Fruit Zone",
+        image: "apples.jpg"
     }
 ];
 

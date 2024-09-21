@@ -93,3 +93,14 @@ body {
 .add-to-cart-btn:hover {
     background-color: #e57373;
 }
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #ff6f61;
+    text-align: center;
+    color: white;
+}

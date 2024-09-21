@@ -27,3 +27,4 @@ function updateTotal() {
     document.querySelector('.cart-summary p:nth-of-type(1)').innerText = Items: ${totalItems};
     document.querySelector('.cart-summary p:nth-of-type(2)').innerText = Subtotal: $${subtotal.toFixed(2)};
     document.querySelector('.cart-summary p:nth-of-type(3)').innerText = `Delivery: $${delivery}
+}

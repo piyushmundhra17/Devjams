@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (order) {
             alert(`Order accepted for: ${order.customerName} from ${order.shopName}`);
             // Add further functionality to handle order acceptance
-            window.location.href = "index.html";
+            window.location.href = "deliveryaccept.html";
         }
     };
 

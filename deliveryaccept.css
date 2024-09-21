@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FF6F61; /* Pinkish orange */
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #FF6F61; /* Pinkish orange */
+}
+
+.order-summary {
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #FF6F61; /* Pinkish orange */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 80%; /* Set a width for better centering */
+    margin: 0 auto; /* Center the list */
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between; /* Space between items and prices */
+    align-items: center;
+}
+
+.price {
+    text-align: right; /* Align prices to the right */
+    width: 30%; /* Set a fixed width for prices */
+}
+
+.item {
+    text-align: left; /* Align items to the left */
+    width: 70%; /* Set a fixed width for items */
+}
+
+.totals {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px; /* Add left padding */
+}
+
+.total-amount {
+    margin-bottom: 10px;
+}
+
+.delivery-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px; /* Add right padding */
+}
+
+.deliver-btn {
+    background-color: #FF6F61; /* Pinkish orange */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Space between delivery amount and button */
+    margin-bottom: 10px; /* Space below the button */
+}
+
+.deliver-btn:hover {
+    background-color: #E65100; /* Darker pinkish orange */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

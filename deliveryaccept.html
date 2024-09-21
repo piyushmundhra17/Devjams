@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Accepted Order - VSpice</title>
+    <link rel="stylesheet" href="deliveryaccept.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        #map {
+            height: 300px; /* Set the height of the map */
+            width: 100%; /* Set the width of the map */
+            margin: 20px auto; /* Center the map */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">VSpice Final Order</div>
+    </header>
+
+    <main>
+        <h1>Accepted Order Details</h1>
+        <div class="order-summary">
+            <h2>Items & Prices</h2>
+            <ul id="item-price-list">
+                <!-- Items and prices will be dynamically populated here -->
+            </ul>
+        </div>
+       
+        <div class="totals">
+            <div class="total-amount">
+                <strong>Total Amount:</strong> <span id="total-amount">$0.00</span>
+            </div>
+            <div class="delivery-details">
+                <div>
+                    <strong>Delivery Amount:</strong> <span id="delivery-amount">$0.00</span>
+                </div>
+                <button class="deliver-btn" id="deliver-now-btn">Deliver Now</button>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VSpice. All rights reserved.</p>
+    </footer>
+
+    <script src="deliveryaccept.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

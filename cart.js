@@ -17,11 +17,24 @@ function displayCart() {
                 <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
             `;
             cartItemsDiv.appendChild(itemDiv);
-            totalPrice += item.price;
+            totalPrice += item.price; // Add to total price
         });
     }
 
-    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+    // Calculate and display billing details
+    updateBilling(totalPrice);
+}
+
+// Function to update billing details
+function updateBilling(subtotal) {
+    const deliveryFee = 20.00;
+    const gst = (subtotal * 0.05).toFixed(2);
+    const grandTotal = (subtotal + deliveryFee + parseFloat(gst)).toFixed(2);
+
+    document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+    document.getElementById('delivery-fee').textContent = deliveryFee.toFixed(2);
+    document.getElementById('gst').textContent = gst;
+    document.getElementById('grand-total').textContent = grandTotal;
 }
 
 // Function to remove item from cart
