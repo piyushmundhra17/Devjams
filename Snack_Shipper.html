@@ -6,6 +6,7 @@
     <title>VSpice Delivery Partners - Orders</title>
     <link rel="stylesheet" href="Snack_Shipper.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -21,7 +22,61 @@
     </header>
 
     <div class="image-section">
-        <img width="800px" height="200px"src="mapofvit.jpg" alt="Delicious Food" />
+        <body>
+            <div class="container">
+                <h2>Location Tracking</h2>
+                <div id="map"></div>
+                <p>Tracking current location...</p>
+            </div>
+        
+            <!-- Leaflet.js JavaScript -->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        
+            <!-- JavaScript for Geolocation and Map -->
+            <script>
+                // Create a map and center it on a default location
+                var map = L.map('map').setView([12.969641341154613, 79.15588119077208], 13);  // Default location is Bangalore, India
+        
+                // Add OpenStreetMap tile layer to the map
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+        
+                // Create a marker to represent the delivery person's current location
+                var marker = L.marker([12.969641341154613,79.15588119077208 ]).addTo(map)
+                    .bindPopup("Delivery person's current location")                  
+                var marker = L.marker([12.972470790823765, 79.15889388872728 ]).addTo(map)
+                    .bindPopup("Enzo")
+                    
+        
+                // Function to update location on the map
+                function updateLocation(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+        
+                    // Set the marker to the new location
+                    marker.setLatLng([lat, lng]);
+                    map.setView([lat, lng], 13); // Adjust the view to center around the new location
+                }
+        
+                // Handle errors in geolocation
+                function handleError(error) {
+                    console.log('Error getting location: ', error.message);
+                }
+        
+                // Watch the user's location and update the marker on the map
+                if (navigator.geolocation) {
+                    navigator.geolocation.watchPosition(updateLocation, handleError, {
+                        enableHighAccuracy: true, // Use GPS if available
+                        maximumAge: 10000, // Don't accept an old cached position
+                        timeout: 10000 // Wait for at most 10 seconds for GPS signal
+                    });
+                } else {
+                    alert("Geolocation is not supported by this browser.");
+                }
+            </script>
+        </body>
+        
     </div>
     <a id="orders">
     <main>
